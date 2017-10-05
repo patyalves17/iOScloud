@@ -17,8 +17,10 @@ class CarsTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ViewController
-        vc.car = cars[tableView.indexPathForSelectedRow!.row]
+        if segue.identifier == "edit"{
+            let vc = segue.destination as! ViewController
+            vc.car = cars[tableView.indexPathForSelectedRow!.row]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +63,9 @@ class CarsTableViewController: UITableViewController {
             
             REST.deleteCar(car, onComplete: {(success) in
                 if success {
+                    
+                    self.cars.remove(at: indexPath.row)
+                    
                     DispatchQueue.main.async {
                         tableView.deleteRows(at: [indexPath], with: .fade)
                     }

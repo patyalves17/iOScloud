@@ -30,6 +30,15 @@ class ViewController: UIViewController {
             
         }
         
+        REST.downloadImage(url: "http://receitatodahora.com.br/wp-content/uploads/2015/11/trufas1.jpg"){
+            (image:UIImage?) in
+            
+            DispatchQueue.main.async {
+                 self.ivCars.image = image
+            }
+           
+        }
+        
     }
     
     @IBAction func saveCar(_ sender: UIButton) {
