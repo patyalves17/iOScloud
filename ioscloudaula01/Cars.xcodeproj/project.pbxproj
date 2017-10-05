@@ -13,6 +13,8 @@
 		AC2239491E89C8ED005761D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2239481E89C8ED005761D9 /* Assets.xcassets */; };
 		AC22394C1E89C8ED005761D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC22394A1E89C8ED005761D9 /* LaunchScreen.storyboard */; };
 		AC2239541E89C94F005761D9 /* CarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2239531E89C94F005761D9 /* CarsTableViewController.swift */; };
+		AC4C87DE1F85991D00554DD6 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C87DD1F85991D00554DD6 /* Car.swift */; };
+		AC4C87E01F859A4600554DD6 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C87DF1F859A4600554DD6 /* REST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AC22394B1E89C8ED005761D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC22394D1E89C8ED005761D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2239531E89C94F005761D9 /* CarsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsTableViewController.swift; sourceTree = "<group>"; };
+		AC4C87DD1F85991D00554DD6 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		AC4C87DF1F859A4600554DD6 /* REST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				AC2239481E89C8ED005761D9 /* Assets.xcassets */,
 				AC22394A1E89C8ED005761D9 /* LaunchScreen.storyboard */,
 				AC22394D1E89C8ED005761D9 /* Info.plist */,
+				AC4C87DD1F85991D00554DD6 /* Car.swift */,
+				AC4C87DF1F859A4600554DD6 /* REST.swift */,
 			);
 			path = Cars;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			files = (
 				AC2239441E89C8ED005761D9 /* ViewController.swift in Sources */,
 				AC2239541E89C94F005761D9 /* CarsTableViewController.swift in Sources */,
+				AC4C87DE1F85991D00554DD6 /* Car.swift in Sources */,
+				AC4C87E01F859A4600554DD6 /* REST.swift in Sources */,
 				AC2239421E89C8ED005761D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

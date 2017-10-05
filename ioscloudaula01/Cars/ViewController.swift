@@ -16,11 +16,54 @@ class ViewController: UIViewController {
     @IBOutlet weak var scGasType: UISegmentedControl!
     @IBOutlet weak var ivCars: UIImageView!
     
+    var car: Car!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if car != nil {
+            tfBrand.text = car.brand
+            tfName.text = car.name
+            tfPrice.text = "\(car.price)"
+            scGasType.selectedSegmentIndex = car.gasType.rawValue
+            title = "Atualizando \(car.name)"
+            
+        }
+        
     }
     
     @IBAction func saveCar(_ sender: UIButton) {
+        if car == nil {
+            let car = Car(brand:tfBrand.text!, name: tfName.text!, price:Double(tfPrice.text!)!, gasType: GasType(rawValue: scGasType.selectedSegmentIndex)!)
+        
+            REST.saveCar(car){ (success: Bool) in
+                print(success)
+            
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            
+            
+            }
+        }else{
+            car.name = tfName.text!
+            car.brand = tfBrand.text!
+            car.price = Double(tfPrice.text!)!
+            car.gasType = GasType(rawValue: scGasType.selectedSegmentIndex)!
+            REST.updateCar(car, onComplete: { (success: Bool) in
+                print(success)
+                
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+                
+                
+            })
+            
+            
+        }
+        
+        
     }
 }
 
